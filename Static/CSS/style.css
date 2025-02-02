@@ -1,0 +1,17 @@
+@import url(quiz.css);
+
+body {
+    background: radial-gradient(ellipse at center, #c2e9fb, #a1c4fd);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+}
+
+.result {
+    color: red;
+}
