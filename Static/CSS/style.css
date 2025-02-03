@@ -1,4 +1,5 @@
 @import url(quiz.css);
+@import url(questions-style.css);
 
 body {
     background: radial-gradient(ellipse at center, #c2e9fb, #a1c4fd);
