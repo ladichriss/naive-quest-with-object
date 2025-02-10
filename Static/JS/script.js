@@ -3,20 +3,20 @@ const question = document.querySelector('.body-question')
 const button = document.querySelector('.button')
 const form = document.querySelector('.form')
 const punteggio = document.querySelector('.result')
-const correzioni = document.querySelector('.correzioni')
 let contatore = 0
 let total_score = 0
 
 button.addEventListener('click', function(event) {
     event.preventDefault()
     let user_answer = document.querySelector('.input-user').value
+    user_answer.value = " "
     if (contatore < questions.length) {
         questions[contatore].risposta_utente = user_answer.toLowerCase()
 
         if (questions[contatore].risposta_utente === questions[contatore].risposta_corretta) {
             total_score = total_score + questions[contatore].punteggio
         }
-
+    
         contatore = contatore + 1;
 
         if (contatore < questions.length) {
@@ -24,11 +24,13 @@ button.addEventListener('click', function(event) {
         } else { 
             question.textContent = "Hai finito le domande!"
             punteggio.textContent = `Il tuo punteggio è: ${total_score}/13`
-            correzioni.textContent = "Clicca qui per ricevere le CORREZIONI 📋"
         }
 
     }
+
+    document.querySelector('.input-user').value = ""
 })
+
 
 let questions = [
     {
